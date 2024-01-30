@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+	<style type="text/css">
+		*{
+			text-decoration: none;
+		}
+
+        .body{
+            height: 98vh;
+        }
+
+		body{
+			background-image : url(/static/purple2.jpg); 
+		}
+        
+		.navbar{
+			background: #3c00a0; font-family: calibri; padding-right: 15px;padding-left: 15px;
+            height: 12%;
+			border-radius: 5px;
+		}
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+			font-size: 35px; font-weight: 600; color: rgb(255, 255, 255);
+		}
+		li{
+			list-style: none; display: inline-block;
+		}
+		li a{
+			color: rgb(255, 255, 255); font-size: 18px; font-weight: bold; margin-right: 25px;
+		}
+		button{
+			background-color: rgb(255, 255, 255); margin-left: 10px; border-radius: 10px; padding: 10px; width: 90px;
+		}
+		button a{
+			color: #3c00a0; font-weight: bold; font-size: 15px;
+		}
+
+        .main{
+            height: 88%;
+            display: flex;
+            justify-content: center;
+            overflow: auto;
+        }
+        .feed{
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .post {
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 600px;
+            height: 650px;
+        
+        }
+
+        .post-image {
+            width: 600px;
+            height: 600px;
+            border-radius: 5px;
+        }
+
+        .like-image , .comment-image{
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+
+	</style>
+</head>
+<body>
+    <div class="body">
+    
+	<nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">NEXUS</a>
+             </div>
+			<ul>
+				<button><a href="#">Home</a></button>
+				<button><a href="upload">Upload</a></button>
+				<button><a href="profile">Profile</a></button>
+				<button><a href="logout">LogOut</a></button>
+				<button><a href="setting">Settings</a></button>
+			</ul>
+		</div>
+
+	</nav>
+	
+
+    <div class="main">
+        <div class="feed">
+            
+            <div class="post">
+              <div>
+                <img class="post-image" src="{% static 'post.png' %}" alt="">
+
+              </div>
+
+              <div>
+
+                <a href=""><img class="like-image" src="{% static 'like.svg' %}" alt=""></a>
+                <a href=""></a><img class="comment-image" src="{% static 'comment.svg' %}" alt=""></a>
+              </div>
+            </div>
+
+
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>
